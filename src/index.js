@@ -1,14 +1,13 @@
-import 'react-hot-loader/patch'
-import 'babel-polyfill'
-import React from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { ConnectedRouter } from 'react-router-redux'
-import store, { history } from './store'
-import { BrowserRouter } from 'react-router-dom'
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'react-router-redux';
+import 'react-hot-loader/patch';
+import 'babel-polyfill';
 
-import configureStore from './modules/configure'
-import App from './components/app'
+import store, { history } from './store';
+
+import App from './components/app';
 
 import registerServiceWorker from './registerServiceWorker';
 
