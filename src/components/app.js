@@ -13,10 +13,10 @@ const App = () => (
       <Link to="/about-us">About</Link>
     </header>
 
-    <main>
+    <article>
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
-    </main>
+    </article>
   </div>
 )
 
