@@ -1,21 +1,20 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom'
+import NavLink from './atoms/nav-link';
 
-import Home from './pages/home'
-import About from './pages/about'
+import Routes from '../routes';
 
 import './app.scss'
 
 const App = () => (
   <div>
     <header>
-      <Link to="/">Home</Link>
-      <Link to="/about-us">About</Link>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/about">About</NavLink>
+      <NavLink to="/not-found">Not Found</NavLink>
     </header>
 
     <article>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about-us" component={About} />
+      <Routes />
     </article>
   </div>
 )
