@@ -9,7 +9,7 @@ import store, { history } from './store';
 
 import App from './components/app';
 
-import registerServiceWorker from './registerServiceWorker';
+import registerSW from './registerSW';
 
 const renderApp = () => (
   <Provider store={store}>
@@ -22,7 +22,7 @@ const renderApp = () => (
 const root = document.getElementById('root')
 render(renderApp(), root)
 
-registerServiceWorker();
+registerSW();
 
 if (module.hot) {
   module.hot.accept('./components/app', () => {
