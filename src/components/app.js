@@ -1,7 +1,7 @@
 import React from 'react';
 import NavLink from './atoms/nav-link';
 
-import Routes from '../routes';
+import Routes from '~routes';
 
 import './app.scss'
 
