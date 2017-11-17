@@ -27,7 +27,7 @@ export const incrementAsync = () => {
       dispatch({
         type: INCREMENT
       })
-    }, 2000)
+    }, 1000)
   }
 }
 
@@ -53,6 +53,6 @@ export const decrementAsync = () => {
       dispatch({
         type: DECREMENT
       })
-    }, 2000)
+    }, 1000)
   }
 }
