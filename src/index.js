@@ -5,9 +5,9 @@ import { ConnectedRouter } from 'react-router-redux';
 import 'react-hot-loader/patch';
 import 'babel-polyfill';
 
-import store, { history } from './store';
+import store, { history } from '~store';
 
-import App from './components/app';
+import App from '~components/app';
 
 import registerSW from './registerSW';
 
@@ -25,8 +25,8 @@ render(renderApp(), root)
 registerSW();
 
 if (module.hot) {
-  module.hot.accept('./components/app', () => {
-    require('./components/app')
+  module.hot.accept('~components/app', () => {
+    require('~components/app')
     render(renderApp(), root)
   })
 }
