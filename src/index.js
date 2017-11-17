@@ -7,7 +7,7 @@ import 'babel-polyfill';
 
 import store, { history } from '~store';
 
-import App from '~components/app';
+import App from '~components/app/app';
 
 import registerSW from './registerSW';
 
@@ -25,8 +25,8 @@ render(renderApp(), root)
 registerSW();
 
 if (module.hot) {
-  module.hot.accept('~components/app', () => {
-    require('~components/app')
+  module.hot.accept('~components/app/app', () => {
+    require('~components/app/app')
     render(renderApp(), root)
   })
 }
