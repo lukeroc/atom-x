@@ -1,9 +1,9 @@
-const NAMESPACE = 'COUNTER';
+const NAMESPACE = 'COUNTER'
 
-export const INCREMENT_REQUESTED = `${NAMESPACE}/INCREMENT_REQUESTED`;
-export const INCREMENT = `${NAMESPACE}/INCREMENT`;
-export const DECREMENT_REQUESTED = `${NAMESPACE}/DECREMENT_REQUESTED`;
-export const DECREMENT = `${NAMESPACE}/DECREMENT`;
+export const INCREMENT_REQUESTED = `${NAMESPACE}/INCREMENT_REQUESTED`
+export const INCREMENT = `${NAMESPACE}/INCREMENT`
+export const DECREMENT_REQUESTED = `${NAMESPACE}/DECREMENT_REQUESTED`
+export const DECREMENT = `${NAMESPACE}/DECREMENT`
 
 export const increment = () => {
   return dispatch => {
@@ -16,7 +16,7 @@ export const increment = () => {
     })
   }
 }
-  
+
 export const incrementAsync = () => {
   return dispatch => {
     dispatch({
@@ -30,7 +30,7 @@ export const incrementAsync = () => {
     }, 2000)
   }
 }
-  
+
 export const decrement = () => {
   return dispatch => {
     dispatch({

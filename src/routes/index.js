@@ -1,10 +1,10 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import asyncComponent from '~utils/async-component';
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+import asyncComponent from '~utils/async-component'
 
-const AsyncHome = asyncComponent(() => import('~components/pages/home'));
-const AsyncAbout = asyncComponent(() => import('~components/pages/about'));
-const AsyncFourOhFour = asyncComponent(() => import('~components/pages/error'));
+const AsyncHome = asyncComponent(() => import('~components/pages/home'))
+const AsyncAbout = asyncComponent(() => import('~components/pages/about'))
+const AsyncFourOhFour = asyncComponent(() => import('~components/pages/error'))
 
 export default ({ childProps }) =>
   <Switch>
