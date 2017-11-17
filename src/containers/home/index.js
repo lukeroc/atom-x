@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -28,6 +29,8 @@ const Home = props => (
     <p><button onClick={() => props.changePage()}>Go to about page via redux</button></p>
   </div>
 )
+
+// export default Home
 
 const mapStateToProps = state => ({
   count: state.counter.count,
