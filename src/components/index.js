@@ -1,15 +1,3 @@
-// Atoms
-import NavLink from './atoms/nav-link'
-
-// Pages
-import Home from './pages/home'
-import About from './pages/about'
-import FourOhFour from './pages/error'
-
-// EXPORTS
-export {
-  NavLink,
-  Home,
-  About,
-  FourOhFour
-}
+export { default as Home } from './pages/home'
+export { default as About } from './pages/about'
+export { default as FourOhFour } from './pages/error'
