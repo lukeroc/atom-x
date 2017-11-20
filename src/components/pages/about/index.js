@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default () => (
-  <div>
+  <article className="page-about">
     <h1>About</h1>
-  </div>
+  </article>
 )

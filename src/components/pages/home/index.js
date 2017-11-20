@@ -7,7 +7,7 @@ export default class Home extends Component {
 
   render () {
     return (
-      <div>
+      <article className="page-home">
         <h1>Home</h1>
         <p>Count: {this.props.count}</p>
 
@@ -22,7 +22,7 @@ export default class Home extends Component {
         </p>
 
         <p><button onClick={() => this.props.changePage()}>Go to about page via redux</button></p>
-      </div>
+      </article>
     )
   }
 }

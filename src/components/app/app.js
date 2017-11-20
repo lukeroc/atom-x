@@ -1,23 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-import Routes from '~routes';
-
-import NavLink from '../atoms/nav-link';
+import Routes from '~routes'
 
 import './app.scss'
 
-const App = () => (
-  <div>
-    <header>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/about">About</NavLink>
-      <NavLink to="/not-found">Not Found</NavLink>
-    </header>
+export default class App extends Component {
+  render () {
+    return (
+      <section id="app">
+        <header>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/not-found">Not Found</Link>
+        </header>
 
-    <article>
-      <Routes />
-    </article>
-  </div>
-)
-
-export default App;
+        <main>
+          <Routes />
+        </main>
+      </section>
+    )
+  }
+}
