@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button } from 'atom-c'
 
 export default class Home extends Component {
   constructor ({ props }) {
@@ -12,16 +13,16 @@ export default class Home extends Component {
         <p>Count: {this.props.count}</p>
 
         <p>
-          <button onClick={this.props.increment} disabled={this.props.isIncrementing}>Increment</button>
-          <button onClick={this.props.incrementAsync} disabled={this.props.isIncrementing}>Increment Async</button>
+          <Button onClick={this.props.increment} disabled={this.props.isIncrementing}>Increment</Button>
+          <Button onClick={this.props.incrementAsync} disabled={this.props.isIncrementing}>Increment Async</Button>
         </p>
 
         <p>
-          <button onClick={this.props.decrement} disabled={this.props.isDecrementing}>Decrementing</button>
-          <button onClick={this.props.decrementAsync} disabled={this.props.isDecrementing}>Decrement Async</button>
+          <Button onClick={this.props.decrement} disabled={this.props.isDecrementing}>Decrementing</Button>
+          <Button onClick={this.props.decrementAsync} disabled={this.props.isDecrementing}>Decrement Async</Button>
         </p>
 
-        <p><button onClick={() => this.props.changePage()}>Go to about page via redux</button></p>
+        <p><Button onClick={() => this.props.changePage()}>Go to about page via redux</Button></p>
       </article>
     )
   }
