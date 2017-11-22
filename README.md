@@ -1,2 +1,2 @@
 # atom-x
-A modern front-end project boilerplate built with PWA, Code Splitting, Redux State Management and ES6.
+A modern front-end project boilerplate including PWA, Code Splitting, Redux State Management and (full-on 😎) ES6.
