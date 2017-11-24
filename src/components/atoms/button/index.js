@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+
 class Button extends Component {
 
-  // Prop type checking
   static propTypes = {
     className: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
@@ -17,18 +17,10 @@ class Button extends Component {
     ])
   }
 
-  // Set default props
   static defaultProps = {
     className: '--primary',
     disabled: false,
     loading: false
-  }
-
-  // Assign prop types and default props
-  constructor (props, propTypes, defaultProps) {
-    super(props)
-    this.propTypes = propTypes
-    this.defaultProps = defaultProps
   }
 
   // Handle click events
@@ -46,8 +38,7 @@ class Button extends Component {
   render () {
     const { children, className, disabled, loading, onClick } = this.props
 
-    // classnames format is 'static class', expression classes, variable classes
-    const classes = classnames('gg-button', {
+    const classes = classnames('a-button', {
       '--disabled': disabled,
       '--loading': loading
     }, className)
