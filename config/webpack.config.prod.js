@@ -191,6 +191,13 @@ const config = {
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    // Extract all 3rd party modules into a separate 'vendor' chunk
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: ({ resource }) => /node_modules/.test(resource),
+    }),
+    // Generate a 'manifest' chunk to be inlined in the HTML template
+    new webpack.optimize.CommonsChunkPlugin('manifest'),
   ]
 };
 
