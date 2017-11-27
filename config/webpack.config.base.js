@@ -2,10 +2,11 @@
 
 const autoprefixer = require('autoprefixer');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
-const path = require('path');
-const paths = require('./paths');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+const path = require('path');
+const paths = require('./paths');
 
 module.exports = {
   resolve: {
