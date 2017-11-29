@@ -3,7 +3,6 @@
 const autoprefixer = require('autoprefixer');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const path = require('path');
 const paths = require('./paths');
@@ -28,6 +27,10 @@ module.exports = {
     alias: {
       '~root': path.resolve(__dirname, '../src'),
       '~components': path.resolve(__dirname, '../src/components'),
+      '~atoms': path.resolve(__dirname, '../src/components/atoms'),
+      '~molecules': path.resolve(__dirname, '../src/components/molecules'),
+      '~organisms': path.resolve(__dirname, '../src/components/organisms'),
+      '~pages': path.resolve(__dirname, '../src/components/pages'),
       '~containers': path.resolve(__dirname, '../src/containers'),
       '~routes': path.resolve(__dirname, '../src/routes'),
       '~store': path.resolve(__dirname, '../src/store'),
@@ -154,10 +157,6 @@ module.exports = {
       // Make sure to add the new loader(s) before the "file" loader.
     ],
   },
-  plugins: [
-    // Generates bundle anlysis page for bundle size and dependency debugging
-    new BundleAnalyzerPlugin()
-  ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
   node: {
