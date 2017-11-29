@@ -1,49 +1,28 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Loadable from 'react-loadable'
 
-import Loader from '~components/atoms/loader'
+import { ROUTES } from './routes.const'
 
-// Set Loadable defaults
-const defaults = {
-  delay: 300,
-  loading: Loader,
-  timeout: 10000
+// Iterate through and render all routes
+const renderRoutes = childProps => {
+  return ROUTES.map( (route, index) => {
+    return (
+      <Route
+        key={ index }
+        path={ route.path }
+        component={ route.component }
+        props={ childProps }
+        exact={ route.exact }
+      />
+    )
+  })
 }
 
-const AsyncHome = Loadable({
-  loader: () => import('~containers/home'),
-  ...defaults
-})
-
-const AsyncAbout = Loadable({
-  loader: () => import('~components/pages/about'),
-  ...defaults
-})
-
-const AsyncFourOhFour = Loadable({
-  loader: () => import('~components/pages/error'),
-  ...defaults
-})
-
 // Export Routes
-export default ({ childProps }) =>
-  <Switch>
-    <Route
-      path='/'
-      exact
-      component={ AsyncHome }
-      props={ childProps }
-    />
-
-    <Route
-      path='/about'
-      exact
-      component={ AsyncAbout }
-      props={ childProps }
-    />
-
-    {/* Catch all unmatched routes */}
-    <Route component={ AsyncFourOhFour } />
-  </Switch>
-;
+export default ({ childProps }) => {
+  return (
+    <Switch>
+      { renderRoutes(childProps) }
+    </Switch>
+  )
+}
