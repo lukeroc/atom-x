@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button } from '~components'
+import Button from '~atoms/button'
 
 export default class Home extends Component {
   render () {
@@ -19,6 +19,8 @@ export default class Home extends Component {
       <article className="page-home">
         <h1>Home</h1>
         <p>Count: { count }</p>
+
+        <br />
 
         <p>
           <Button onClick={ increment } disabled={ isIncrementing }>Increment</Button>
