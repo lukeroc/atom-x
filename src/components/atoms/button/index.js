@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-class Button extends Component {
+export default class Button extends Component {
 
   static propTypes = {
     className: PropTypes.string.isRequired,
@@ -52,5 +52,3 @@ class Button extends Component {
     )
   }
 }
-
-export default Button
