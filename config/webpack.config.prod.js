@@ -8,6 +8,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const merge = require('webpack-merge');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
@@ -198,6 +199,8 @@ const config = {
     }),
     // Generate a 'manifest' chunk to be inlined in the HTML template
     new webpack.optimize.CommonsChunkPlugin('manifest'),
+    // Generates bundle anlysis page for bundle size and dependency debugging
+    new BundleAnalyzerPlugin()
   ]
 };
 
