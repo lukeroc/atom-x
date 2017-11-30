@@ -1,0 +1,27 @@
+.a-page__error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+
+  .a-page-state {
+    width: 420px;
+    padding-bottom: 4em;
+    text-align: center;
+
+    .a-sad-face {
+      font-size: 4em;
+      color: #ccc;
+    }
+
+    h1 {
+      margin: 1.4rem 0;
+      font-weight: 300;
+      color: #444;
+    }
+
+    a {
+      font-size: 1.8em;
+    }
+  }
+}
