@@ -31,6 +31,7 @@ module.exports = {
       '~molecules': path.resolve(__dirname, '../src/components/molecules'),
       '~organisms': path.resolve(__dirname, '../src/components/organisms'),
       '~pages': path.resolve(__dirname, '../src/components/pages'),
+      '~templates': path.resolve(__dirname, '../src/components/templates'),
       '~containers': path.resolve(__dirname, '../src/containers'),
       '~routes': path.resolve(__dirname, '../src/routes'),
       '~store': path.resolve(__dirname, '../src/store'),
