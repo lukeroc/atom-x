@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  background: #0F203A;
+  background: #1c2a38;
   color: #f0f0f0;
 
   .a-header__nav {
@@ -28,6 +28,7 @@
     text-decoration: none;
     transition: all 0.288s;
     text-transform: uppercase;
+    cursor: pointer;
 
     &:visited,
     &:active {
