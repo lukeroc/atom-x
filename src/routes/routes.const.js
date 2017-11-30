@@ -38,6 +38,15 @@ export const ROUTES = [
   },
   {
     component: Loadable({
+      loader: () => import('~pages/posts'),
+      ...loadableDefaults
+    }),
+    exact: true,
+    name: 'Posts',
+    path: '/posts'
+  },
+  {
+    component: Loadable({
       loader: () => import('~pages/error'),
       ...loadableDefaults
     }),
