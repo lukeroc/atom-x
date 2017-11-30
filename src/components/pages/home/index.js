@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import Layout from '~templates/layout'
-
 import Button from '~atoms/button'
+import Section from '~atoms/section'
+import Layout from '~templates/layout'
 
 import './index.scss'
 
@@ -23,7 +23,7 @@ export default class Home extends Component {
     return (
       <Layout>
         <article className="a-article a-page a-page__home">
-          <section className="a-section">
+          <Section>
             <h1>Home</h1>
             <p>Count: { count }</p>
 
@@ -40,7 +40,7 @@ export default class Home extends Component {
             </p>
 
             <p><Button onClick={ () => changePage() }>Go to error page via redux</Button></p>
-          </section>
+          </Section>
         </article>
       </Layout>
     )

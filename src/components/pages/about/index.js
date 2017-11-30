@@ -1,13 +1,14 @@
 import React from 'react'
 
+import Section from '~atoms/section'
 import Layout from '~templates/layout'
 
 export default () => (
   <Layout>
     <article className="a-article a-page a-page__about">
-      <section className="a-section">
+      <Section>
         <h1>About</h1>
-      </section>
+      </Section>
     </article>
   </Layout>
 )
