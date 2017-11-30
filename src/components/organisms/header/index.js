@@ -10,6 +10,12 @@ export default class Header extends Component {
     ) : null
   }
 
+  renderAuthButtons (auth, handleAuth) {
+    return auth
+      ? (<a onClick={ handleAuth } className="a-header__nav__link">Logout</a>)
+      : (<Link className="a-header__nav__link" to="/auth">Login</Link>)
+  }
+
   render () {
     const {
       isAuthenticated,
@@ -27,9 +33,7 @@ export default class Header extends Component {
 
           { this.renderPostsButton(isAuthenticated) }
 
-          <a onClick={ handleAuth } className="a-header__nav__link">
-            { isAuthenticated ? 'Logout' : 'Login' }
-          </a>
+          { this.renderAuthButtons(isAuthenticated, handleAuth) }
         </nav>
       </header>
     )
