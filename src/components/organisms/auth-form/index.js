@@ -5,6 +5,8 @@ import validate from './validate'
 import renderField from './render-field'
 import onSubmit from './on-submit'
 
+import './index.scss'
+
 class AuthForm extends Component {
 
   render () {
@@ -12,7 +14,7 @@ class AuthForm extends Component {
     const { handleSubmit, submitting } = this.props
 
     return (
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="a-auth-form" onSubmit={handleSubmit(onSubmit)}>
         <Field name="username" type="text" component={ renderField } label="Username"/>
         <Field name="password" type="password" component={ renderField } label="Password"/>
         <div>
