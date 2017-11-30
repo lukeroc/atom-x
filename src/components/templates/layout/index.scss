@@ -1,7 +1,5 @@
 .a-layout {
   .a-article {
-    .a-section {
-      padding: 32px;
-    }
+    min-height: calc(100% - 50px);
   }
 }
