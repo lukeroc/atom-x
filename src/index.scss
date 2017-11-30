@@ -1,0 +1,25 @@
+@import "theme/default.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root,
+.a-layout {
+  height: 100%;
+}
+
+.a-article {
+  min-height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  color: #242424;
+}

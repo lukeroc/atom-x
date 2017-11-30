@@ -1,32 +1,22 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'react-router-redux';
-import 'react-hot-loader/patch';
-import 'babel-polyfill';
+import 'babel-polyfill'
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { ConnectedRouter } from 'react-router-redux'
 
-import store, { history } from '~store';
+import Routes from './routes'
+import store, { history } from './store'
+import registerSW from './registerSW'
 
-import App from '~components/app/app';
+import './index.scss'
 
-import registerSW from './registerSW';
-
-const renderApp = () => (
+render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <App />
+      <Routes />
     </ConnectedRouter>
-  </Provider>
+  </Provider>,
+  document.getElementById('root')
 )
 
-const root = document.getElementById('root')
-render(renderApp(), root)
-
-registerSW();
-
-if (module.hot) {
-  module.hot.accept('~components/app/app', () => {
-    require('~components/app/app')
-    render(renderApp(), root)
-  })
-}
+registerSW()
