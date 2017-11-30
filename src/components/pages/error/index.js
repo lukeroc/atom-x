@@ -6,7 +6,7 @@ import Section from '~atoms/section'
 import './index.scss'
 
 export default () => (
-  <article className="a-article a-page a-page__error">
+  <article className="a-article a-page a-page--error">
     <Section>
       <div className="a-page-state">
         <div className="a-sad-face">:(</div>

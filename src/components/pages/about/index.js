@@ -5,7 +5,7 @@ import Layout from '~templates/layout'
 
 export default () => (
   <Layout>
-    <article className="a-article a-page a-page__about">
+    <article className="a-article a-page a-page--about">
       <Section>
         <h1>About</h1>
       </Section>

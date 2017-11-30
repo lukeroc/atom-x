@@ -22,7 +22,7 @@ export default class Home extends Component {
 
     return (
       <Layout>
-        <article className="a-article a-page a-page__home">
+        <article className="a-article a-page a-page--home">
           <Section>
             <h1>Home</h1>
             <p>Count: { count }</p>
