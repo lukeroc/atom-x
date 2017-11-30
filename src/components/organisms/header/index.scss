@@ -1,0 +1,37 @@
+.a-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background: #0F203A;
+  color: #f0f0f0;
+
+  .a-header__nav {
+    margin-left: auto;
+
+    .a-header__nav__link {
+      &:hover {
+        background: #FF5029;
+      }
+
+      &.active {
+        color: #FF5029;
+      }
+    }
+  }
+
+  .a-header__nav__link {
+    margin: 0 16px;
+    padding: 6px 16px;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.288s;
+    text-transform: uppercase;
+
+    &:visited,
+    &:active {
+      color: inherit;
+    }
+  }
+}
