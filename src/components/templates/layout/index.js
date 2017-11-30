@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import classnames from 'classnames'
 
-import Header from '~organisms/header'
+import Header from '~containers/header'
 
 import './index.scss'
 
 export default class Layout extends Component {
 
   render () {
-    const { children, className } = this.props
+    const { children, classNames } = this.props
 
     const classes = classnames(
       'a-layout',
       {},
-      className
+      classNames
     )
 
     return (

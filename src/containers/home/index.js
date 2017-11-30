@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
 
 import Home from '~components/pages/home'
+
 import {
   increment,
   incrementAsync,
@@ -24,7 +25,7 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   incrementAsync,
   decrement,
   decrementAsync,
-  changePage: () => push('/about-us')
+  changePage: () => push('/broken-path')
 }, dispatch)
 
 export default connect(
