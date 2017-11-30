@@ -11,6 +11,15 @@ const loadableDefaults = {
 export const ROUTES = [
   {
     component: Loadable({
+      loader: () => import('~pages/auth'),
+      ...loadableDefaults
+    }),
+    exact: true,
+    name: 'Auth',
+    path: '/auth'
+  },
+  {
+    component: Loadable({
       loader: () => import('~containers/home'),
       ...loadableDefaults
     }),
