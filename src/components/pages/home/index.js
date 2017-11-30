@@ -27,8 +27,6 @@ export default class Home extends Component {
             <h1>Home</h1>
             <p>Count: { count }</p>
 
-            <br />
-
             <p>
               <Button onClick={ increment } disabled={ isIncrementing }>Increment</Button>
               <Button onClick={ incrementAsync } disabled={ isIncrementing }>Increment Async</Button>

@@ -29,7 +29,7 @@ export default class Header extends Component {
         </div>
 
         <nav className="a-header__nav">
-          <Link className="a-header__nav__link" to="about">About</Link>
+          <Link className="a-header__nav__link" to="/about">About</Link>
 
           { this.renderPostsButton(isAuthenticated) }
 
