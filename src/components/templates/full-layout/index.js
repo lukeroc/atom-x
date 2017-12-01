@@ -1,24 +1,21 @@
 import React, { Component } from 'react'
 import classnames from 'classnames'
 
-import Header from '~containers/header'
-
 import './index.scss'
 
-export default class Layout extends Component {
+export default class FullLayout extends Component {
 
   render () {
     const { children, classNames } = this.props
 
     const classes = classnames(
-      'a-layout',
+      'a-layout--full',
       {},
       classNames
     )
 
     return (
       <main className={ classes }>
-        <Header />
         { children }
       </main>
     )

@@ -1,0 +1,14 @@
+.a-layout--full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  background: #f0f0f0;
+
+  .a-article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+  }
+}
