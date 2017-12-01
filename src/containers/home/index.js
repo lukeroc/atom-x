@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
 
-import Home from '~components/pages/home'
+import Home from '~pages/home'
 
 import {
   increment,

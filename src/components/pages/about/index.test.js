@@ -1,3 +1,8 @@
-it('page/About test works', () => {
-  1 === 1
+import React from 'react'
+import ReactDOM from 'react-dom'
+import About from '.'
+
+it('[page] About renders without crashing', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(<About />, div)
 })

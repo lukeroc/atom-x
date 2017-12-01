@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom'
 
 import { ROUTES } from './routes.const'
 
-// Iterate through and render all routes
 const renderRoutes = childProps => {
   return ROUTES.map( (route, index) => {
     return (
@@ -18,7 +17,6 @@ const renderRoutes = childProps => {
   })
 }
 
-// Export Routes
 export default ({ childProps }) => {
   return (
     <Switch>
