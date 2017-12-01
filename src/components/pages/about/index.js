@@ -1,10 +1,10 @@
 import React from 'react'
 
 import Section from '~atoms/section'
-import Layout from '~templates/layout'
+import DefaultLayout from '~templates/default-layout'
 
 export default () => (
-  <Layout>
+  <DefaultLayout>
     <article className="a-article a-page a-page--about">
       <Section>
         <h1>About</h1>
@@ -44,5 +44,5 @@ export default () => (
         </p>
       </Section>
     </article>
-  </Layout>
+  </DefaultLayout>
 )

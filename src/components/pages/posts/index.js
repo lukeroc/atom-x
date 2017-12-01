@@ -1,12 +1,12 @@
 import React from 'react'
 
 import Section from '~atoms/section'
-import Layout from '~templates/layout'
+import DefaultLayout from '~templates/default-layout'
 
 import './index.scss'
 
 export default () => (
-  <Layout>
+  <DefaultLayout>
     <article className="a-article a-page a-page--posts">
       <Section>
         <h1>Posts</h1>
@@ -49,5 +49,5 @@ export default () => (
         </p>
       </Section>
     </article>
-  </Layout>
+  </DefaultLayout>
 )

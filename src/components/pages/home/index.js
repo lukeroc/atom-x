@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Button from '~atoms/button'
 import Section from '~atoms/section'
-import Layout from '~templates/layout'
+import DefaultLayout from '~templates/default-layout'
 
 import './index.scss'
 
@@ -21,7 +21,7 @@ export default class Home extends Component {
     } = this.props
 
     return (
-      <Layout>
+      <DefaultLayout>
         <article className="a-article a-page a-page--home">
           <Section>
             <h1>Home</h1>
@@ -40,7 +40,7 @@ export default class Home extends Component {
             <p><Button onClick={ () => changePage() }>Go to error page via redux</Button></p>
           </Section>
         </article>
-      </Layout>
+      </DefaultLayout>
     )
   }
 }
