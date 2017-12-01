@@ -6,8 +6,8 @@ import counter from './counter/reducer'
 import authentication from './authentication/reducer'
 
 export default combineReducers({
-  routing: routerReducer,
-  counter,
   authentication,
-  form: formReducer
+  counter,
+  form: formReducer,
+  routing: routerReducer
 })

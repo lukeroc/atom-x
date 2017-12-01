@@ -1,3 +1,3 @@
-it('counter/reducer test works', () => {
+it('[module/counter:reducer] test works', () => {
   1 === 1
 })

@@ -3,12 +3,12 @@ import { routerMiddleware } from 'react-router-redux'
 import thunk from 'redux-thunk'
 import ReduxPromise from 'redux-promise'
 import createHistory from 'history/createBrowserHistory'
-import rootReducer from './reducers'
 
-export const history = createHistory()
+import Reducers from './reducers'
 
-const initialState = {}
 const enhancers = []
+const history = createHistory()
+const initialState = {}
 const middleware = [
   thunk,
   ReduxPromise,
@@ -29,9 +29,10 @@ const composedEnhancers = compose(
 )
 
 const store = createStore(
-  rootReducer,
+  Reducers,
   initialState,
   composedEnhancers
 )
 
+export { history }
 export default store
